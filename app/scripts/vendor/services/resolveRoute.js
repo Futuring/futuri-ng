@@ -14,8 +14,8 @@ define(['vendor/services/dependencyResolverFor'], function(dependencyResolverFor
             {   
                 abstract: true,
                 views: {
-                    "admin": { 
-                        templateUrl: "template/layout.html"
+                    "app": { 
+                        templateUrl: templatePath
                      },
                     "auth": { template: "" }
                 }

@@ -6,7 +6,7 @@ define([
 function(config, resolveRoute, angular){
 
 	var app = angular.module('app',['restangular', 'ui.bootstrap', 'ui.router', 'vendor.consts', 'vendor.directives', 'vendor.services']);
-	var templatePath = '/admin/template';
+	var templatePath = 'template/layout.html';
 	var modules = [];
 
 	app.config(

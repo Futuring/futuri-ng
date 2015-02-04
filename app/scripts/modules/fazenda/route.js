@@ -6,10 +6,11 @@ function() {
 		defaultRoutePath: "/fazenda",
 		icon: "plus",
 		routes: {
-			"/index" : {
+			"/" : {
 				name: "fazenda",
 				menu: true,
-				deps: "controllers"
+				deps: "controllers",
+				templateUrl: 'index.html'
 			}
 		}
 	};
