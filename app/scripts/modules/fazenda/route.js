@@ -3,10 +3,10 @@ define([
 function() {
 	return {
 		name: "fazenda",
-		defaultRoutePath: "/",
+		defaultRoutePath: "/fazenda",
 		icon: "plus",
 		routes: {
-			"/" : {
+			"/index" : {
 				name: "fazenda",
 				menu: true,
 				deps: "controllers"

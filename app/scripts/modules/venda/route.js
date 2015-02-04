@@ -1,7 +1,9 @@
 define([
+	'angular'
 ],
-function() {
+function(angular) {
 	return {
+		name: "venda",
 		defaultRoutePath: "/venda",
 		icon: "home",
 		routes: {
@@ -9,6 +11,11 @@ function() {
 				name: "cliente",
 				menu: false,
 				templateUrl: "cliente.html"
+			},
+			'/produtos' : {
+				name: "produtos",
+				menu: false,
+				templateUrl: "produtos.html"
 			}
 		}
 	};

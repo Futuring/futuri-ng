@@ -1,18 +1,9 @@
 define([
-	'apps/fazenda/route', 
-	'apps/venda/route',
+	'config/loader.config', 
 	'vendor/services/resolveRoute', 
-	'angular', 
-	'angularUiRoute',
-	'lodash',
-	'Restangular',
-	'angularBootstrap',
-	'vendor/directive/crud-directive',
-	'vendor/directive/login',
-	'vendor/constant/consts',
-	'vendor/services/authServices',
+	'angular'
 ], 
-function(routeFazenda, routeVenda, resolveRoute){
+function(config, resolveRoute, angular){
 
 	var app = angular.module('app',['restangular', 'ui.bootstrap', 'ui.router', 'vendor.consts', 'vendor.directives', 'vendor.services']);
 	var templatePath = '/admin/template';
@@ -36,14 +27,13 @@ function(routeFazenda, routeVenda, resolveRoute){
 	        app.service    = $provide.service;
 
 	        //$locationProvider.html5Mode(true);
-
-	        modules['fazenda'] = routeFazenda;
-	        modules['venda']   = routeVenda;
 	        
-
-	       	$urlRouterProvider.otherwise('/');
+        	for(var key in config.modules) {
+    			modules[key] = config.modules[key];
+        	}
 
         	resolveRoute($stateProvider, templatePath, modules);
+			$urlRouterProvider.otherwise('/');
 		}
 	]);
 

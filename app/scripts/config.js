@@ -41,7 +41,17 @@ require.config({
 });
 
 require([
-	'app'
+	'app',
+	'config/modules',
+	'angular', 
+	'angularUiRoute',
+	'lodash',
+	'Restangular',
+	'angularBootstrap',
+	'vendor/directive/crud-directive',
+	'vendor/directive/login',
+	'vendor/constant/consts',
+	'vendor/services/authServices',
 ], 
 function (app) 
 {
