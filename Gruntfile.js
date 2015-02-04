@@ -56,32 +56,6 @@ module.exports = function(grunt) {
           ]
         }
       }
-    },
-
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        eqnull: true,
-        browser: true,
-        nomen: true,
-        globals: {
-          define: true,
-          requirejs: true,
-          require: true
-        }
-      },
-      all: ['www/js/app/*.js', 'www/js/common.js', 'www/js/page1.js', 'www/js/page2.js']
-    },
-
-    qunit: {
-      all: ['tests/index.html']
     }
   });
 
@@ -89,9 +63,6 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks("require-js");
   // if you use this example standalone
   grunt.loadTasks("../../tasks");
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
 
-  grunt.registerTask('default', ['jshint', 'qunit']);
   grunt.registerTask('build', 'requirejs');
 };
