@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> <?= $this->title; ?></title>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/admin.css" rel="stylesheet" type="text/css" />
+<link href="assets/plugins/data-tables/DT_bootstrap.css" rel="stylesheet">
+<link href="assets/plugins/advanced-datatable/css/demo_table.css" rel="stylesheet">
+<link href="assets/plugins/advanced-datatable/css/demo_page.css" rel="stylesheet">
+
+
+<script data-main="scripts/config" src="../bower_components/requirejs/require.js"></script>
+</head>
+<body class="light_theme  fixed_header left_nav_fixed">
+
+
+    <div ui-view="admin"></div>
+    <div ui-view="login"></div>
+          
+<script src="assets/js/jquery-2.1.0.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/common-script.js"></script>
+<script src="assets/js/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jPushMenu.js"></script> 
+<script src="assets/js/side-chats.js"></script>
+
+</body>
+</html>

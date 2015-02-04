@@ -1,0 +1,81 @@
+<div class="wrapper">
+  <!--\\\\\\\ wrapper Start \\\\\\-->
+  <div class="header_bar">
+    <!--\\\\\\\ header Start \\\\\\-->
+    <div class="brand">
+      <!--\\\\\\\ brand Start \\\\\\-->
+      <div class="logo" style="display:block"><span class="theme_color">FIUTI</span>APP</div>
+      <div class="small_logo" style="display:none"><img src="/app/assets/images/s-logo.png" width="50" height="47" alt="s-logo" /> <img src="/app/assets/images/r-logo.png" width="122" height="20" alt="r-logo" /></div>
+    </div>
+    <!--\\\\\\\ brand end \\\\\\-->
+    <div class="header_top_bar">
+      <!--\\\\\\\ header top bar start \\\\\\-->
+      <a href="javascript:void(0);" class="menutoggle"> <i class="fa fa-bars"></i> </a>
+      <div class="top_left">
+        <div class="top_left_menu">
+          <ul>
+            <li> <a href="javascript:void(0);"> <i class="fa fa-repeat"></i> </a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="top_right_bar">
+        <user-info></user-info>
+      </div>
+    </div>
+    <!--\\\\\\\ header top bar end \\\\\\-->
+  </div>
+  <!--\\\\\\\ header end \\\\\\-->
+  <div class="inner">
+    <!--\\\\\\\ inner start \\\\\\-->
+    <div class="left_nav">
+      <!--\\\\\\\left_nav start \\\\\\-->
+      <div class="search_bar"> <i class="fa fa-search"></i>
+        <input name="" type="text" class="search" placeholder="Search Dashboard..." />
+      </div>
+      <div class="left_nav_slidebar">
+          
+          <menu-side></menu-side>
+
+      </div>
+    </div>
+    <!--\\\\\\\left_nav end \\\\\\-->
+    <div class="contentpanel">
+      <!--\\\\\\\ contentpanel start\\\\\\-->
+      <div class="pull-left breadcrumb_admin clear_both">
+        <div class="pull-right">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">PAGES</a></li>
+            <li class="active">blankpage</li>
+          </ol>
+        </div>
+      </div>
+      <div class="container clear_both padding_fix">
+        <!--\\\\\\\ container  start \\\\\\-->
+      		<div ui-view></div>
+
+      </div>
+      <!--\\\\\\\ container  end \\\\\\-->
+    </div>
+    <!--\\\\\\\ content panel end \\\\\\-->
+  </div>
+  <!--\\\\\\\ inner end\\\\\\-->
+</div>
+<!--\\\\\\\ wrapper end\\\\\\-->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Compose New Task</h4>
+      </div>
+      <div class="modal-body"> content </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+

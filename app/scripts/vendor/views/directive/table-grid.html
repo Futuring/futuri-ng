@@ -1,0 +1,33 @@
+ <table st-table="model"  class="display table table-bordered table-striped" id="dynamic-table {{tableName}}">
+    
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th ng-repeat='column in columns'>{{column.name}}</th> 
+      </tr>
+      <tr ng-if="searchBar">
+        <th>
+          <input st-search="'id'" placeholder="buscar por id" class="input-sm form-control" type="search"/>
+        </th>
+        <th ng-repeat="column in columns">
+          <input st-search="'{{column.name}}'" placeholder="buscar por {{column.name}}" class="input-sm form-control" type="search" />
+        </th>   
+      </tr> 
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in model">
+            <td>{{item.id}}</td>
+            <th ng-repeat="column in columns">
+              {{item[column.name]}}
+            </th>
+        </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-pagination="" st-items-by-page="5" st-displayed-pages="7"></div>
+        </td>
+      </tr>
+    </tfoot>
+</table>
