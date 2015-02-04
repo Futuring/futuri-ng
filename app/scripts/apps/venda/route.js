@@ -2,7 +2,7 @@ define([
 ],
 function() {
 	return {
-		defaultRoutePath: "/",
+		defaultRoutePath: "/venda",
 		icon: "home",
 		routes: {
 			"/cliente" : {

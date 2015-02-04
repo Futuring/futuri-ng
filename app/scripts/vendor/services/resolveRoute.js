@@ -17,7 +17,7 @@ define(['vendor/services/dependencyResolverFor'], function(dependencyResolverFor
                     "admin": { 
                         templateUrl: "template/layout.html"
                      },
-                    "login": { template: "" }
+                    "auth": { template: "" }
                 }
             }
         );
@@ -25,6 +25,7 @@ define(['vendor/services/dependencyResolverFor'], function(dependencyResolverFor
         for(var key in modules) {
              
             var data = modules[key].routes;
+            var rootPath = modules[key].defaultRoutePath === "/" ? "" : modules[key].defaultRoutePath;
 
             for(var path in data) {
                 routerCollection[data[path].name] = path;
@@ -42,7 +43,7 @@ define(['vendor/services/dependencyResolverFor'], function(dependencyResolverFor
                                     "apps/"+key+"/"+preffix+"/"+routeName+"/"+routeName;
 
                 $stateProvider.state("system."+routeName, {
-                    url: path,
+                    url: rootPath+path,
                     controller: data[path].controller ? data[path].controller : routeName+"Controller", 
                     templateUrl: modelPreffix+"apps/"+key+"/"+preffix+'/'+routeName+'/'+template,
                     resolve: dependencyResolverFor(deps, path), 

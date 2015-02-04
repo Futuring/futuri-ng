@@ -2,6 +2,7 @@ define([
 ],
 function() {
 	return {
+		name: "fazenda",
 		defaultRoutePath: "/",
 		icon: "plus",
 		routes: {
