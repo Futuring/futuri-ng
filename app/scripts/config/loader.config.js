@@ -8,4 +8,5 @@ define(imports, function() {
 	return {
 		'modules': modules
 	};
+	
 })

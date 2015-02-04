@@ -1,7 +1,6 @@
 define([
-	'angular'
 ],
-function(angular) {
+function() {
 	return {
 		name: "venda",
 		defaultRoutePath: "/venda",
